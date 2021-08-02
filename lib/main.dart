@@ -12,8 +12,10 @@ class QuotesList extends StatefulWidget {
 
 class _QuotesListState extends State<QuotesList> {
 
-  List<String> quotes = [
-
+  List<Quote> quotes = [
+    Quote(author: 'Osca Wild', text: 'Be yourself'),
+    Quote(author: 'Osca Wild', text: 'Be yourself'),
+    Quote(author: 'Osca Wild', text: 'Be yourself'),
   ];
 
   @override
@@ -26,7 +28,7 @@ class _QuotesListState extends State<QuotesList> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((quote) => Text(quote)).toList(),
+        children: quotes.map((quote) => Text('${quote.text} - ${quote.author}')).toList(),
       ),
     );
   }
